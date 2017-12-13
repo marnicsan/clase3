@@ -16,23 +16,14 @@ var resOperacion=function(){
 	}while(valorB.length<=0 || isNaN(valorB))
 	do{
 		operacion=prompt("Operación a realizar (SUMAR / RESTAR / MULTIPLICAR / DIVIDIR): ");
-	}while(operacion!="SUMAR" && operacion!="sumar" && operacion!="RESTAR" &&
-			operacion!="restar" && operacion!="MULTIPLICAR" && operacion!="multiplicar" &&
-			operacion!="DIVIDIR" && operacion!="dividir")
+		operacion=operacion.toLowerCase();
+	}while(operacion!="sumar" && operacion!="restar" && operacion!="multiplicar" && operacion!="dividir")
 	switch(operacion){
-		case "SUMAR": res=suma(valorA,valorB);
-						break;
 		case "sumar": res=suma(valorA,valorB);
-						break;
-		case "RESTAR": res=resta(valorA,valorB);
 						break;
 		case "restar": res=resta(valorA,valorB);
 						break;
-		case "MULTIPLICAR": res=producto(valorA,valorB);
-						break;
 		case "multiplicar": res=producto(valorA,valorB);
-						break;
-		case "DIVIDIR","dividir": res=division(valorA,valorB);
 						break;
 		case "dividir": res=division(valorA,valorB);
 						break;
